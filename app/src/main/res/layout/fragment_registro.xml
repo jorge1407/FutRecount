@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroFragment"
+    android:background="#004D40">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/etTituloRegistro"
+        android:textColor="#ffffff"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_margin="25dp"
+        android:paddingTop="100dp"
+        >
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:background="@drawable/botones_general"
+            android:hint="@string/etNombre"
+            android:layout_marginBottom="15dp"/>
+        <EditText
+            android:id="@+id/etApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="20dp"
+            android:background="@drawable/botones_general"
+            android:hint="@string/etApellido" />
+
+        <EditText
+            android:id="@+id/etEmailRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:background="@drawable/botones_general"
+            android:hint="@string/etEmailegistro"/>
+
+        <EditText
+            android:id="@+id/etPasswordRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/botones_general"
+            android:hint="@string/etPasswordRegistro"/>
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:textSize="20dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/botones_general"
+            android:hint="@string/etTelefono" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+
+
+            <Button
+                android:id="@+id/btnRegistrarse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botones_general"
+                android:layout_marginBottom="25dp"
+                android:textSize="20dp"
+                android:text="@string/btnRegistrarse"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/botones_general"
+                android:textSize="20dp"
+                android:text="@string/btnCancelar"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

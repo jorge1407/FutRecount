@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1090880580292",
+    "firebase_url": "https://projectorecuperasao.firebaseio.com",
+    "project_id": "projectorecuperasao",
+    "storage_bucket": "projectorecuperasao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090880580292:android:895d03911fa87d28",
+        "android_client_info": {
+          "package_name": "com.example.apprec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090880580292-pvnjv1sp0io6svf65nko7qq59khcka0a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apprec",
+            "certificate_hash": "6d2a6c485ad169659152e542402139a91481132a"
+          }
+        },
+        {
+          "client_id": "1090880580292-4b45co95t7gsgaqa48jmv2ce9aftcl1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5FWtoIksSWoNxCPjBRLs2BJNqorm44aY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090880580292-4b45co95t7gsgaqa48jmv2ce9aftcl1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

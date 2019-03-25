@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AppRec</string>
+
+    <string name="etEmail">Correo Eletronico</string>
+    <string name="etPassword">Contraseña</string>
+    <string name="etTituloLogin">LOGIN</string>
+    <string name="etTituloRegistro">REGISTRO</string>
+    <string name="btnRegistro">REGISTRO</string>
+    <string name="btnLogin">ENTRAR</string>
+    <string name="etNombre">Nombre</string>
+    <string name="etApellido">Apellido</string>
+    <string name="etEmailegistro">Email</string>
+    <string name="etPasswordRegistro">Contraseña</string>
+    <string name="etTelefono">Telefono</string>
+    <string name="btnRegistrarse">COMPLETAR REGISTRO</string>
+    <string name="btnCancelar">Cancelar</string>
+
+
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
