@@ -6,6 +6,7 @@ public class Usuario {
     private String email;
     private String password;
     private String telefono;
+    String claveUsuario;
 
     public Usuario(String email, String password){
         this.email=email;
@@ -17,8 +18,17 @@ public class Usuario {
         this.email=email;
         this.password=password;
         this.telefono=telefono;
+
+
     }
 
+    public String getClaveUsuario() {
+        return claveUsuario;
+    }
+
+    public void setClaveUsuario(String claveUsuario) {
+        this.claveUsuario = claveUsuario;
+    }
 
     public String getNombre() {
         return nombre;

@@ -7,23 +7,31 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.apprec.LoginFragment;
+import com.example.apprec.NavigationHost;
+import com.example.apprec.RegistroFragment;
+import com.example.apprec.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class GestorFirebase {
     private FirebaseAuth mAuth;
     private Activity activity;
+    private DatabaseReference bbdd;
+
     //CODE FORMAT
 
     public GestorFirebase(Activity activity) {
         mAuth = FirebaseAuth.getInstance();
         this.activity = activity;
     }
-    public void loginUser(final String email, final String password){
-        mAuth.signInWithEmailAndPassword(email,password)
+
+    public void loginUser(final String email, final String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -45,6 +53,31 @@ public class GestorFirebase {
                 });
     }
 
+    public void registrarUser(String email, String password, final Usuario u) {
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            u.setClaveUsuario(getIdUsuario());
+                            guardarDatos(u);
+                            mAuth.signOut();
+                            ((NavigationHost) activity).navegacionFragmentos(new LoginFragment());
+                        } else {
+
+                        }
+
+                    }
+                });
+    }
+
+    public void guardarDatos(Usuario u) {
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference("Usuarios");
+        database.child(getIdUsuario()).setValue(u);
+    }
 
 
+    public String getIdUsuario() {
+        return mAuth.getCurrentUser().getUid();
+    }
 }

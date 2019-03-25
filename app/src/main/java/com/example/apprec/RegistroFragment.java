@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.example.apprec.Control.GestorFirebase;
 
 
 /**
@@ -16,15 +20,20 @@ import android.view.ViewGroup;
  * Use the {@link RegistroFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class RegistroFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class RegistroFragment extends Fragment implements View.OnClickListener {
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private EditText etNombre;
+    private EditText etApellido;
+    private EditText etEmail;
+    private EditText etPassword;
+    private EditText etTelefono;
+
+    private Button btnRegistrarse;
+    private Button btnCancelar;
+
+
+    private GestorFirebase gestorFirebase;
+
 
 
     public RegistroFragment() {
@@ -39,7 +48,6 @@ public class RegistroFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment RegistroFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static RegistroFragment newInstance(String param1, String param2) {
         RegistroFragment fragment = new RegistroFragment();
         return fragment;
@@ -48,18 +56,46 @@ public class RegistroFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v =inflater.inflate(R.layout.fragment_registro, container, false);
+
+        etNombre = v.findViewById(R.id.etNombre);
+        etApellido = v.findViewById(R.id.etApellidos);
+        etEmail = v.findViewById(R.id.etEmail);
+        etPassword = v.findViewById(R.id.etPassword);
+        etTelefono = v.findViewById(R.id.etTelefono);
+
+
+        btnRegistrarse = v.findViewById(R.id.btnRegistrarse);
+        btnRegistrarse.setOnClickListener(this);
+        btnCancelar=v.findViewById(R.id.btnCancelar);
+        btnCancelar.setOnClickListener(this);
+
+        return v;
+
+
     }
+
+    @Override
+    public void onClick(View v) {
+
+        switch (v.getId()){
+            case R.id.btnRegistrarse:
+                Usuario u = new Usuario(etNombre.getText().toString(),etApellido.getText().toString(),etEmail.getText().toString(),etPassword.getText().toString(),etTelefono.getText().toString());
+                gestorFirebase.registrarUser(etEmail.getText().toString(),etPassword.getText().toString(),u);
+        break;
+
+            case R.id.btnCancelar:
+                ((NavigationHost)getActivity()).navegacionFragmentos(new LoginFragment());
+        }
+
+    }
+
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -77,6 +113,7 @@ public class RegistroFragment extends Fragment {
         super.onDetach();
 
     }
+
 
     /**
      * This interface must be implemented by activities that contain this
