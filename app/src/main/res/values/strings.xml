@@ -4,6 +4,7 @@
     <string name="etEmail">Correo Eletronico</string>
     <string name="etPassword">Contraseña</string>
     <string name="etTituloLogin">LOGIN</string>
+    <string name="etTituloAgregar">CREAR COMBINADA</string>
     <string name="etTituloRegistro">REGISTRO</string>
     <string name="btnRegistro">REGISTRO</string>
     <string name="btnLogin">ENTRAR</string>
@@ -14,6 +15,9 @@
     <string name="etTelefono">Telefono</string>
     <string name="btnRegistrarse">COMPLETAR REGISTRO</string>
     <string name="btnCancelar">Cancelar</string>
+    <string name="etLocal">LOCAL</string>
+    <string name="etVisitante">VISITANTE</string>
+    <string name="etCuota">CUOTA APOSTADA</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

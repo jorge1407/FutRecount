@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00695C"
     tools:context=".Fragmentos.AgregarPartidosFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="@string/etTituloAgregar"
+        android:textColor="#ffffff"
+        android:textSize="60dp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/etLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:background="@drawable/botones_general"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/etLocal"/>
+
+        <EditText
+            android:id="@+id/etVisitante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones_general"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/etVisitante"/>
+
+        <EditText
+            android:id="@+id/etCuota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones_general"
+            android:inputType="numberDecimal"
+            android:paddingLeft="15dp"
+            android:hint="@string/etCuota" />
+
+    </LinearLayout>
 
 </FrameLayout>
