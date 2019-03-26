@@ -114,6 +114,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 case R.id.btnLogin:
                     if(comprobarDatos()){
                         gestorFirebase.loginUser(etEmail.getText().toString(),etPassword.getText().toString());
+                        ((NavigationHost)getActivity()).navegacionFragmentos(new AgregarPartidosFragment());
                     }else
                         {
                             Toast.makeText(getActivity(),"Error comprueba los campos",Toast.LENGTH_SHORT).show();
