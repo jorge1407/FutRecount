@@ -92,7 +92,7 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
             case R.id.btnRegistrarse:
                 Usuario u = new Usuario(etNombre.getText().toString(),etApellido.getText().toString(),etEmailRegistro.getText().toString(),etPasswordRegistro.getText().toString(),etTelefono.getText().toString());
                 gestorFirebase.registrarUser(etEmailRegistro.getText().toString(),etPasswordRegistro.getText().toString(),u);
-                ((NavigationHost)getActivity()).navegacionFragmentos(new LoginFragment());
+
                 break;
 
             case R.id.btnCancelar:

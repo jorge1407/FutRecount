@@ -84,6 +84,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         btnLogin.setOnClickListener(this);
         btnRegistrar.setOnClickListener(this);
 
+        gestorFirebase = new GestorFirebase(getActivity());
+
         return v;
 
     }
