@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#00695C"
     android:orientation="vertical"
-    tools:context=".LoginFragment">
+    tools:context=".Fragmentos.LoginFragment">
 
     <TextView
         android:layout_width="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.apprec;
+package com.example.apprec.Navegacion;
 
 import android.support.v4.app.Fragment;
 

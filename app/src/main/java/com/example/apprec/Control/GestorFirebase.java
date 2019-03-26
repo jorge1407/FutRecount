@@ -1,15 +1,12 @@
 package com.example.apprec.Control;
 
 import android.app.Activity;
-import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.apprec.LoginFragment;
-import com.example.apprec.NavigationHost;
-import com.example.apprec.RegistroFragment;
-import com.example.apprec.Usuario;
+import com.example.apprec.Fragmentos.LoginFragment;
+import com.example.apprec.Navegacion.NavigationHost;
+import com.example.apprec.Modelos.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -18,10 +15,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class GestorFirebase {
+public class GestorFirebase{
     private FirebaseAuth mAuth;
     private Activity activity;
     private DatabaseReference bbdd;
+
 
     //CODE FORMAT
 
@@ -53,7 +51,7 @@ public class GestorFirebase {
                 });
     }
 
-    public void registrarUser(String email, String password, final Usuario u) {
+    public void registrarUser(final String email, final String password, final Usuario u) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(activity, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -64,6 +62,7 @@ public class GestorFirebase {
                             mAuth.signOut();
                             ((NavigationHost) activity).navegacionFragmentos(new LoginFragment());
                         } else {
+                            Log.d("Jorge","PRIROPO"+task.getException());
 
                         }
 

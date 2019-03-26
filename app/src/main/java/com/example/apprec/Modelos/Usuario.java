@@ -1,4 +1,4 @@
-package com.example.apprec;
+package com.example.apprec.Modelos;
 
 public class Usuario {
     private String nombre;
@@ -8,10 +8,16 @@ public class Usuario {
     private String telefono;
     String claveUsuario;
 
+    public Usuario(){
+
+    }
+
+    /*
     public Usuario(String email, String password){
         this.email=email;
         this.password=password;
     }
+    */
     public Usuario(String nombre, String apellido, String email,String password, String telefono){
         this.nombre=nombre;
         this.apellido=apellido;

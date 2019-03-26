@@ -6,8 +6,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.apprec.Control.GestorFirebase;
+import com.example.apprec.Fragmentos.LoginFragment;
+import com.example.apprec.Fragmentos.RegistroFragment;
+import com.example.apprec.Navegacion.NavigationHost;
+import com.google.firebase.FirebaseApp;
 
-public class MainActivity extends AppCompatActivity implements NavigationHost  {
+public class MainActivity extends AppCompatActivity implements NavigationHost {
 
 
     private GestorFirebase gestorFirebase;
@@ -19,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements NavigationHost  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseApp.initializeApp(getApplicationContext());
 
 
         if (savedInstanceState == null) {

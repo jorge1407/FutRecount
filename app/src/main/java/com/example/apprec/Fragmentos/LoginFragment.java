@@ -1,4 +1,4 @@
-package com.example.apprec;
+package com.example.apprec.Fragmentos;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.apprec.Control.GestorFirebase;
+import com.example.apprec.Navegacion.NavigationHost;
+import com.example.apprec.R;
 
 
 /**

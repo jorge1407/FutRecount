@@ -1,4 +1,4 @@
-package com.example.apprec;
+package com.example.apprec.Fragmentos;
 
 import android.content.Context;
 import android.net.Uri;
@@ -11,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.apprec.Control.GestorFirebase;
+import com.example.apprec.Navegacion.NavigationHost;
+import com.example.apprec.R;
+import com.example.apprec.Modelos.Usuario;
 
 
 /**
@@ -24,8 +27,8 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
 
     private EditText etNombre;
     private EditText etApellido;
-    private EditText etEmail;
-    private EditText etPassword;
+    private EditText etEmailRegistro;
+    private EditText etPasswordRegistro;
     private EditText etTelefono;
 
     private Button btnRegistrarse;
@@ -33,6 +36,7 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
 
 
     private GestorFirebase gestorFirebase;
+
 
 
 
@@ -64,8 +68,8 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
 
         etNombre = v.findViewById(R.id.etNombre);
         etApellido = v.findViewById(R.id.etApellidos);
-        etEmail = v.findViewById(R.id.etEmail);
-        etPassword = v.findViewById(R.id.etPassword);
+        etEmailRegistro = v.findViewById(R.id.etEmailRegistro);
+        etPasswordRegistro = v.findViewById(R.id.etPasswordRegistro);
         etTelefono = v.findViewById(R.id.etTelefono);
 
 
@@ -73,6 +77,8 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
         btnRegistrarse.setOnClickListener(this);
         btnCancelar=v.findViewById(R.id.btnCancelar);
         btnCancelar.setOnClickListener(this);
+
+        gestorFirebase =  new GestorFirebase(getActivity());
 
         return v;
 
@@ -84,9 +90,10 @@ public class RegistroFragment extends Fragment implements View.OnClickListener {
 
         switch (v.getId()){
             case R.id.btnRegistrarse:
-                Usuario u = new Usuario(etNombre.getText().toString(),etApellido.getText().toString(),etEmail.getText().toString(),etPassword.getText().toString(),etTelefono.getText().toString());
-                gestorFirebase.registrarUser(etEmail.getText().toString(),etPassword.getText().toString(),u);
-        break;
+                Usuario u = new Usuario(etNombre.getText().toString(),etApellido.getText().toString(),etEmailRegistro.getText().toString(),etPasswordRegistro.getText().toString(),etTelefono.getText().toString());
+                gestorFirebase.registrarUser(etEmailRegistro.getText().toString(),etPasswordRegistro.getText().toString(),u);
+                ((NavigationHost)getActivity()).navegacionFragmentos(new LoginFragment());
+                break;
 
             case R.id.btnCancelar:
                 ((NavigationHost)getActivity()).navegacionFragmentos(new LoginFragment());
