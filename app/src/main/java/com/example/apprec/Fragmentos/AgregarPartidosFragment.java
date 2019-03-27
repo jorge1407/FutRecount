@@ -29,6 +29,9 @@ public class AgregarPartidosFragment extends Fragment implements AdapterView.OnI
    private Spinner spLiga;
     private Spinner spLocal;
 
+    String[] ligaSantan = getResources().getStringArray(R.array.ligaSantander);
+
+
 
 
 
@@ -69,6 +72,7 @@ public class AgregarPartidosFragment extends Fragment implements AdapterView.OnI
 
         spLiga.setOnItemSelectedListener(this);
 
+
         return  v;
     }
 
@@ -91,6 +95,7 @@ public class AgregarPartidosFragment extends Fragment implements AdapterView.OnI
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
 
         if(spLiga.getSelectedItem().equals("Liga Santander")) {
         }
