@@ -122,9 +122,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                     }
                     break;
                 case R.id.btnRegistrar:
-                    Log.d("Jorge","Aqui entra?");
                     ((NavigationHost)getActivity()).navegacionFragmentos(new RegistroFragment());
-                    Log.d("Jorge","Aqui entra?");
 
                     break;
 
