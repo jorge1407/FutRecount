@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.example.apprec.Fragmentos.AgregarPartidosFragment;
 import com.example.apprec.Fragmentos.LoginFragment;
 import com.example.apprec.Navegacion.NavigationHost;
 import com.example.apprec.Modelos.Usuario;
@@ -38,6 +39,8 @@ public class GestorFirebase{
 
                             Log.d("JORGE", "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            ((NavigationHost)activity).navegacionFragmentos(new AgregarPartidosFragment());
+
 
                         } else {
                             // If sign in fails, display a message to the user.

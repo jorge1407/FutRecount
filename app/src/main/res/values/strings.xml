@@ -20,6 +20,54 @@
     <string name="etCuota">CUOTA APOSTADA</string>
 
 
+    <string name="spinnerLigas">SELECCIONE UNA LIGA</string>
+
+    <string-array name="ligas">
+        <item>@string/spinnerLigas</item>
+        <item>Premier League</item>
+        <item>Liga Santander</item>
+        <item>Bundesliga</item>
+        <item>Ligue One</item>
+        <item>Serie A</item>
+    </string-array>
+
+    <string name="spinnerLocal">SELECCIONE EQUIPO LOCAL</string>
+
+
+    <string-array name="ligaSantander">
+        <item>@string/spinnerLocal</item>
+        <item>Barcelona</item>
+        <item>Atletico de Madrid</item>
+        <item>Real Madrid</item>
+        <item>Getafe</item>
+        <item>Alaves</item>
+        <item>Sevilla</item>
+        <item>Valencia</item>
+        <item>Betis</item>
+        <item>Athletic Bilbao</item>
+        <item>Real Sociedad</item>
+        <item>Eibar</item>
+        <item>Girona</item>
+        <item>Espanyol</item>
+        <item>Leganes</item>
+        <item>Levante</item>
+        <item>Valadolid</item>
+        <item>Villareal</item>
+        <item>Celta</item>
+        <item>Rayo Vallecano</item>
+        <item>Huesca</item>
+    </string-array>
+
+    <string name="spinnerPremier"></string>
+    <string-array name="premierLeague">
+        <item>@string/spinnerLocal</item>
+        <item>dORTMUND</item>
+
+
+    </string-array>
+
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

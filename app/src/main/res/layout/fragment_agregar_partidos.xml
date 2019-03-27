@@ -19,6 +19,8 @@
         android:textStyle="bold"
         android:typeface="monospace" />
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,34 +28,27 @@
         android:gravity="center_vertical"
         android:layout_margin="20dp">
 
-        <EditText
-            android:id="@+id/etLocal"
+        <Spinner
+            android:id="@+id/spinnerLigas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:background="@drawable/botones_general"
-            android:paddingLeft="15dp"
+            android:entries="@array/ligas"
             android:layout_marginBottom="15dp"
-            android:hint="@string/etLocal"/>
+            android:prompt="@string/spinnerLigas"
+            android:background="@drawable/botones_general"/>
 
-        <EditText
-            android:id="@+id/etVisitante"
+        <Spinner
+            android:id="@+id/spinnerEquipoLocal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/botones_general"
-            android:inputType="textPersonName"
-            android:paddingLeft="15dp"
+            android:entries="@array/ligaSantander"
             android:layout_marginBottom="15dp"
-            android:hint="@string/etVisitante"/>
-
-        <EditText
-            android:id="@+id/etCuota"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:background="@drawable/botones_general"
-            android:inputType="numberDecimal"
-            android:paddingLeft="15dp"
-            android:hint="@string/etCuota" />
+            android:drawSelectorOnTop="true" />
+
+
+
+
 
     </LinearLayout>
 
